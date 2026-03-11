@@ -26,7 +26,7 @@ Desarrollo y diseño íntegramente sobre **Debian**, utilizando un stack de herr
 - **Modelado 3D & BIM:** [FreeCAD](https://www.freecad.org) y [BonsaiBIM](https://www.bonsaibim.org)
 - **Ingeniería 2D:** [QCAD](https://www.qcad.org)
 - **Geomática & Topografía:** [QGIS / QAD](https://www.qgis.org)
-- **Desarrollo Web:** HTML5, CSS3 y JavaScript
+- **Desarrollo Web:** HTML5, CSS3 y JavaScript - [VSCodium](https://vscodium.com/)
 
 ### 🏢 Software Comercial (Entornos Corporativos)
 - **CAD & BIM:** AutoCAD Civil 3D, SketchUp, Revit.

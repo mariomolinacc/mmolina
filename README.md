@@ -1,6 +1,6 @@
 # Hola, soy Mario Molina 👋 
 
-Profesional en el sector de la **Arquitectura, Ingeniería y Construcción (AEC)**. Mi enfoque actual combina la solidez de la gestión de proyectos con la innovación del desarrollo web y las tecnologías 3D.
+Profesional con mas de tres decadas de experiencia en diseño y desarrolo de proyectos de **Arquitectura, Ingeniería y Construcción (AEC)**. Mi enfoque actual combina la solidez de la gestión de proyectos con la innovación del desarrollo web y las tecnologías de diseño 3D.
 
 ---
 

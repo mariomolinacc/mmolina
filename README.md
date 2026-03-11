@@ -22,11 +22,14 @@ Desarrollo y diseño íntegramente sobre **Debian**, utilizando un stack de herr
 ---
 
 ## 🛠️ Herramientas & Tecnologías
-![Debian](https://img.shields.io)
-![FreeCAD](https://img.shields.io)
-![Blender](https://img.shields.io)
-![QGIS](https://img.shields.io)
-![HTML5](https://img.shields.io)
+### 🐧 Ecosistema Open Source (Debian)
+- **Modelado 3D & BIM:** [FreeCAD](https://www.freecad.org) y [BonsaiBIM](https://www.bonsaibim.org)
+- **Ingeniería 2D:** [QCAD](https://www.qcad.org)
+- **Geomática & Topografía:** [QGIS / QAD](https://www.qgis.org)
+- **Desarrollo Web:** HTML5, CSS3 y JavaScript
+
+### 🏢 Software Comercial (Entornos Corporativos)
+- **CAD & BIM:** AutoCAD Civil 3D, SketchUp, Revit.
 
 
 ---

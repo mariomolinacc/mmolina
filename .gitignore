@@ -1,0 +1,10 @@
+# Linux/Debian
+*~
+.directory
+.Trash-*
+.cache
+.thumbnails
+
+# Web & OS
+.DS_Store
+Thumbs.db

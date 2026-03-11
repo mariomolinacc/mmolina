@@ -22,11 +22,11 @@ Desarrollo y diseño íntegramente sobre **Debian**, utilizando un stack de herr
 ---
 
 ## 🛠️ Herramientas & Tecnologías
-![Debian](https://debian.org)
-![FreeCAD](https://freecad.org)
-![Blender](https://blender.org)
-![QCAD](https://qcad.org)
-![QGIS](https://qgis.org)
+![Debian](https://img.shields.io)
+![FreeCAD](https://img.shields.io)
+![Blender](https://img.shields.io)
+![QGIS](https://img.shields.io)
+![HTML5](https://img.shields.io)
 
 ---
 📫 **Contacto:** [Mi Sitio Web](https://mariomolinacc.github.io)

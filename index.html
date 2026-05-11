@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mario Molina - Diseñador Constructor Civil | CV</title>
+  <title>Mario Molina - Diseñador y Constructor Civil</title>
   <style>
     * {
       margin: 0;
@@ -14,7 +14,8 @@
     body {
       background-color: #121212;
       color: #e0e0e0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      /* Fuentes optimizadas para mejor renderizado */
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
     }
 
@@ -22,74 +23,6 @@
       max-width: 900px;
       margin: 0 auto;
       padding: 20px;
-    }
-
-    /* Navegación */
-    .nav-principal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: rgba(18, 18, 18, 0.95);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-      padding: 12px 20px;
-      border-bottom: 1px solid rgba(144, 202, 249, 0.2);
-      transition: transform 0.3s ease;
-    }
-
-    .nav-principal.hidden {
-      transform: translateY(-100%);
-    }
-
-    .nav-contenido {
-      max-width: 900px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav-logo {
-      color: #90caf9;
-      font-weight: 700;
-      font-size: 1.1rem;
-      text-decoration: none;
-    }
-
-    .nav-enlaces {
-      display: flex;
-      gap: 8px;
-    }
-
-    .nav-enlace {
-      color: #b0bec5;
-      text-decoration: none;
-      padding: 8px 14px;
-      border-radius: 8px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-
-    .nav-enlace:hover,
-    .nav-enlace.activo {
-      color: #90caf9;
-      background: rgba(144, 202, 249, 0.1);
-    }
-
-    .nav-enlace.resaltado {
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      color: white;
-    }
-
-    .nav-enlace.resaltado:hover {
-      background: linear-gradient(135deg, #2a5298, #1e3c72);
-    }
-
-    /* Espaciado para navegación fija */
-    body.nav-activa .container {
-      padding-top: 70px;
     }
 
     header {
@@ -100,37 +33,22 @@
       text-align: center;
       margin-bottom: 40px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-      position: relative;
-      overflow: hidden;
-    }
-
-    header::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: 
-        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.05) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 40%);
-      pointer-events: none;
     }
 
     header h1 {
       font-size: 2.5rem;
-      margin-bottom: 8px;
-      margin-top: 15px;
+      margin-bottom: 15px; /* Espacio correcto sin usar <br> */
       font-weight: 700;
-      position: relative;
+      line-height: 1.2;
     }
 
     .profesion {
       font-size: 1.3rem;
       opacity: 0.95;
       max-width: 700px;
-      margin: 8px auto;
+      margin: 0 auto; /* Centrado sin margen superior innecesario */
       font-weight: 500;
+      line-height: 1.5;
     }
 
     .marcas-banner {
@@ -197,14 +115,72 @@
       display: inline-block;
     }
 
-    /* Estilos específicos para la sección Sobre Mí */
-    .sobre-mi p {
+    /* --- NUEVOS ESTILOS PARA SOBRE MÍ --- */
+    .sobre-mi-layout {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .sobre-mi-texto p {
       font-size: 1.05rem;
       line-height: 1.7;
       color: #d0d0d0;
       margin-bottom: 15px;
-      text-align: justify;
     }
+
+    .sobre-mi-destacado {
+      background: #252525;
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 4px solid #42a5f5;
+    }
+
+    .sobre-mi-destacado h3 {
+      color: #e0e0e0;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+
+    .etiquetas-especialidad {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .etiqueta {
+      background: #2c2c2c;
+      color: #90caf9;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .sobre-mi-cta {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #e0e0e0;
+    }
+
+    .sobre-mi-cta strong {
+      color: #90caf9;
+    }
+
+    /* En pantallas grandes, se pone en 2 columnas */
+    @media (min-width: 768px) {
+      .sobre-mi-layout {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+      .sobre-mi-texto {
+        flex: 1.5;
+      }
+      .sobre-mi-destacado {
+        flex: 1;
+      }
+    }
+    /* --- FIN ESTILOS SOBRE MÍ --- */
 
     /* Galería de proyectos */
     .galeria-proyectos {
@@ -338,230 +314,6 @@
       text-decoration: underline;
     }
 
-    /* ========== NUEVA SECCIÓN: TRAYECTORIA ========== */
-    
-    /* Competencias */
-    .competencias-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      margin-top: 25px;
-    }
-
-    .competencia-card {
-      background: #2c2c2c;
-      border-radius: 10px;
-      padding: 25px;
-      border-left: 4px solid #42a5f5;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .competencia-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-    }
-
-    .competencia-titulo {
-      font-size: 1.15rem;
-      color: #90caf9;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 600;
-    }
-
-    .competencia-desc {
-      color: #b0bec5;
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    /* Timeline de Experiencia */
-    .timeline {
-      position: relative;
-      margin-top: 30px;
-      padding-left: 30px;
-    }
-
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 8px;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: linear-gradient(to bottom, #42a5f5, #1e3c72);
-    }
-
-    .timeline-item {
-      position: relative;
-      margin-bottom: 35px;
-      padding-left: 25px;
-    }
-
-    .timeline-dot {
-      position: absolute;
-      left: -26px;
-      top: 5px;
-      width: 18px;
-      height: 18px;
-      background: #1e3c72;
-      border: 3px solid #42a5f5;
-      border-radius: 50%;
-      z-index: 1;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .timeline-item:hover .timeline-dot {
-      transform: scale(1.2);
-      box-shadow: 0 0 15px rgba(66, 165, 245, 0.5);
-    }
-
-    .job-titulo {
-      font-size: 1.2rem;
-      color: #e0e0e0;
-      font-weight: 700;
-      margin-bottom: 5px;
-    }
-
-    .job-empresa {
-      color: #90caf9;
-      font-weight: 600;
-      font-size: 1rem;
-      margin-bottom: 8px;
-    }
-
-    .job-fecha {
-      display: inline-block;
-      background: rgba(66, 165, 245, 0.15);
-      color: #90caf9;
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      margin-bottom: 12px;
-      font-weight: 500;
-    }
-
-    .job-descripcion {
-      color: #b0bec5;
-      font-size: 0.95rem;
-      line-height: 1.7;
-    }
-
-    /* Educación */
-    .educacion-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      margin-top: 25px;
-    }
-
-    .edu-card {
-      background: #2c2c2c;
-      padding: 25px;
-      border-radius: 10px;
-      border-left: 4px solid #42a5f5;
-      transition: transform 0.3s ease;
-    }
-
-    .edu-card:hover {
-      transform: translateX(5px);
-    }
-
-    .edu-year {
-      font-weight: 700;
-      color: #42a5f5;
-      font-size: 0.9rem;
-      margin-bottom: 5px;
-    }
-
-    .edu-titulo {
-      font-size: 1.05rem;
-      color: #e0e0e0;
-      font-weight: 600;
-      margin-bottom: 5px;
-    }
-
-    .edu-inst {
-      color: #90caf9;
-      font-size: 0.95rem;
-      margin-bottom: 8px;
-    }
-
-    .edu-details {
-      color: #b0bec5;
-      font-size: 0.9rem;
-    }
-
-    .edu-details p {
-      margin-bottom: 3px;
-    }
-
-    .especializaciones-box {
-      margin-top: 30px;
-      padding: 25px;
-      background: rgba(66, 165, 245, 0.05);
-      border-radius: 10px;
-      border: 1px dashed rgba(66, 165, 245, 0.3);
-      text-align: center;
-    }
-
-    .especializaciones-box h3 {
-      color: #90caf9;
-      margin-bottom: 10px;
-      font-size: 1.1rem;
-    }
-
-    .especializaciones-box p {
-      color: #e0e0e0;
-      font-size: 1rem;
-    }
-
-    /* CSS NUEVO: Experiencia Internacional */
-    .intro-text {
-      font-size: 1.05rem;
-      line-height: 1.7;
-      color: #d0d0d0;
-      margin-bottom: 25px;
-      text-align: justify;
-    }
-
-    .paises-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 20px;
-      margin-top: 25px;
-    }
-
-    .pais-item {
-      background: #2c2c2c;
-      padding: 25px 15px;
-      border-radius: 10px;
-      text-align: center;
-      transition: transform 0.3s ease, border-color 0.3s ease;
-      border-bottom: 3px solid transparent;
-    }
-
-    .pais-item:hover {
-      transform: translateY(-5px);
-      border-bottom-color: #42a5f5;
-    }
-
-    .flag-icon {
-      font-size: 2.8rem;
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    .pais-nombre {
-      color: #e0e0e0;
-      font-weight: 600;
-      font-size: 1rem;
-    }
-    /* Fin CSS Experiencia Internacional */
-
     /* Footer */
     footer {
       text-align: center;
@@ -574,143 +326,82 @@
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     }
 
-    .footer-enlaces {
-      margin-bottom: 15px;
-    }
-
-    .footer-enlaces a {
-      color: #90caf9;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-
-    .footer-enlaces a:hover {
-      color: #42a5f5;
-    }
-
-    /* Animaciones de entrada */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Responsive */
+    /* Responsive General */
     @media (min-width: 768px) {
       header h1 { font-size: 2.8rem; }
       .profesion { font-size: 1.5rem; }
       .cta-section h2 { font-size: 2.2rem; }
-      .sobre-mi p { font-size: 1.1rem; }
-      
-      .timeline { padding-left: 40px; }
-      .timeline-item { padding-left: 30px; }
-      .timeline-dot { left: -32px; }
+      .sobre-mi-texto p { font-size: 1.1rem; }
     }
 
     @media (min-width: 1024px) {
       .container { width: 95%; max-width: none; }
     }
-
-    @media (max-width: 600px) {
-      .nav-enlaces { gap: 4px; }
-      .nav-enlace { padding: 6px 10px; font-size: 0.8rem; }
-      .section { padding: 25px 20px; }
-    }
   </style>
 </head>
-<body class="nav-activa">
-  
-  <!-- Navegación Fija -->
-  <nav class="nav-principal" id="navbar">
-    <div class="nav-contenido">
-      <a href="#inicio" class="nav-logo">MM.Proyectos</a>
-      <div class="nav-enlaces">
-        <a href="#inicio" class="nav-enlace activo">Inicio</a>
-        <a href="#servicios" class="nav-enlace">Servicios</a>
-        <a href="#trayectoria" class="nav-enlace">Trayectoria</a>
-        <a href="#contacto" class="nav-enlace resaltado">Contacto</a>
-      </div>
-    </div>
-  </nav>
-
+<body>
   <div class="container">
-    
-    <!-- Header Principal -->
-    <header id="inicio">
-      <h1>Mario Molina</h1>
-      <p class="profesion">Diseñador y Constructor Civil · Topógrafo · Ing. de Sistemas</p>
-      <p class="profesion">Proyecto y Dirección de Obras</p>
+    <header>
+      <h1>Diseño, Arquitectura Civil<br>y Geomática</h1>
+      <p class="profesion">Dirige: Mario Molina — Constructor Civil —<br>Soluciones de diseño, desarrollo y dirección técnica de obras.</p>
     </header>
 
-    <!-- Banner Marcas -->
     <div class="marcas-banner">
-      <div class="linea-fija">30 años de experiencia forjada en compañías líderes como:</div>
+      <div class="linea-fija">Más de 35 años de trayectoria desarrollando proyectos para empresas notables como:</div>
       <div class="linea-animada-container">
         <div class="marcas-scroll" aria-hidden="true">
           <div class="marcas-grupo">
             <span>Arcor</span><span>Philips</span><span>Whirlpool</span>
-            <span>Peabody</span><span>Philco</span><span>| Daewoo · Sanyo · Newsan · Midas |</span>
+            <span>Peabody</span><span>Philco</span><span>Midas</span>
           </div>
           <div class="marcas-grupo">
             <span>Arcor</span><span>Philips</span><span>Whirlpool</span>
-            <span>Peabody</span><span>Philco</span><span>| Daewoo · Sanyo · Newsan · Midas |</span>
+            <span>Peabody</span><span>Philco</span><span>Midas</span>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Sobre Mí -->
-    <section class="section sobre-mi fade-in">
+    <!-- SECCIÓN SOBRE MÍ MEJORADA -->
+    <section class="section sobre-mi">
       <h2>Sobre Mí</h2>
-      <p>Soy un profesional con más de tres décadas de experiencia, especializado en diseño, desarrollo y gerencia de proyectos de Ingeniería y Construcción.</p>
-      <p>He trabajado en una amplia gama de proyectos incluyendo viviendas, edificaciones e infraestructuras como complejos industriales y logísticos. Mi objetivo es transformar sus ideas en proyectos, con calidad y compromiso.</p>
-    </section>
-
-    <!-- Mis Proyectos -->
-    <section class="section fade-in">
-      <h2>Mis Proyectos</h2>
-      <div class="galeria-proyectos">
-        <div class="proyecto-item">
-          <img src="https://raw.githubusercontent.com/mariomolina-mm-ar/web/main/images/proyecto_ct_00.jpg" alt="Dibujo en lápiz de proyecto arquitectónico" loading="lazy">
-          <p class="proyecto-etiqueta">Dibujo en Lápiz</p>
+      <div class="sobre-mi-layout">
+        <div class="sobre-mi-texto">
+          <p>Dirijo mi estudio de diseño especializado en proyectos de viviendas (urbanas y rurales), centros comerciales y depósitos logísticos. Brindo soluciones integrales desde el diseño hasta la dirección técnica de obra.</p>
+          <p class="sobre-mi-cta"><strong>Cuéntame, ¿Necesitas asesoría, planos o supervisión?</strong> Estoy aquí para ayudarte.</p>
         </div>
-        <div class="proyecto-item">
-          <img src="https://raw.githubusercontent.com/mariomolina-mm-ar/web/main/images/proyecto_ct_01.jpg" alt="Render diurno de vivienda" loading="lazy">
-          <p class="proyecto-etiqueta">Render de Día</p>
+        <div class="sobre-mi-destacado">
+          <h3>Especialidades</h3>
+          <div class="etiquetas-especialidad">
+            <span class="etiqueta">Viviendas</span>
+            <span class="etiqueta">Centros Comerciales</span>
+            <span class="etiqueta">Depósitos Logísticos</span>
+            <span class="etiqueta">Urbano</span>
+            <span class="etiqueta">Rural</span>
+            <span class="etiqueta">Dirección Técnica</span>
+          </div>
         </div>
-        <div class="proyecto-item">
-          <img src="https://raw.githubusercontent.com/mariomolina-mm-ar/web/main/images/proyecto_ct_02.jpg" alt="Render nocturno de vivienda" loading="lazy">
-          <p class="proyecto-etiqueta">Render de Noche</p>
-        </div>        
       </div>
     </section>
 
-    <!-- Servicios -->
-    <section class="section fade-in" id="servicios">
-      <h2>Servicios</h2>
+    <section class="section">
+      <h2>Mis servicios</h2>
       <div class="servicios">
         <div class="servicio-item">
           <div class="icono">🏠</div>
-          <div><h3>Diseño Arquitectónico</h3><p>Edificación Residencial y Comercial</p></div>
+          <div><h3>Diseño Arquitectónico</h3><p> Diseño de viviendas, centros comerciales y logísticos.</p></div>
         </div>
         <div class="servicio-item">
           <div class="icono">📐</div>
-          <div><h3>Proyectos a medida</h3><p>Diseño 3D Personalizado</p></div>
+          <div><h3>Proyectos a medida</h3><p>Diseño Personalizado, Visualizaciones 3D</p></div>
         </div>
         <div class="servicio-item">
           <div class="icono">📑</div>
-          <div><h3>Regularizaciones</h3><p>Planos municipales y trámites</p></div>
+          <div><h3>Regularizaciones</h3><p>Planos municipales, trámites, habilitaciones</p></div>
         </div>
         <div class="servicio-item">
           <div class="icono">👷</div>
-          <div><h3>Dirección de obras</h3><p>Supervisión y gerenciamiento</p></div>
+          <div><h3>Dirección de obras</h3><p>Control y supervisión técnica.</p></div>
         </div>
         <div class="servicio-item">
           <div class="icono">📏</div>
@@ -723,183 +414,38 @@
       </div>
     </section>
 
-    <!-- ==================== SECCIÓN TRAYECTORIA ==================== -->
-    
-    <!-- Competencias Técnicas -->
-    <section class="section fade-in" id="trayectoria">
-      <h2>Competencias Técnicas</h2>
-      <div class="competencias-grid">
-        <div class="competencia-card">
-          <h3 class="competencia-titulo">
-            <span>🏗️</span> Diseño y Dirección de Obra
-          </h3>
-          <p class="competencia-desc">Diseño de edificaciones residenciales y comerciales. Planificación, coordinación y supervisión integral de proyectos de construcción. Garantía de cumplimiento en plazos, presupuestos y estándares de calidad.</p>
+    <!-- Incio seccion visualizaciones -->
+    <section class="section">
+      <h2>Mis Proyectos</h2>
+      <div class="galeria-proyectos">
+        <div class="proyecto-item">
+          <img src="img/proyecto_pe_01.webp" alt="Edificio multifamiliar y comercial - Punta del Este, Uruguay" loading="lazy">
+          <p class="proyecto-etiqueta">🏛️ Edificio multifamiliar y comercial - Punta del Este, Uruguay</p>
         </div>
-        <div class="competencia-card">
-          <h3 class="competencia-titulo">
-            <span>💻</span> Software Avanzado
-          </h3>
-          <p class="competencia-desc">Dominio experto en AutoCAD 3D, modelado BIM, SIG y herramientas de IA aplicadas a la construcción. Especialización en Topografía Geomática.</p>
+        <div class="proyecto-item">
+          <img src="img/proyecto_df_01.webp" alt="Proyecto Casa Dufaur, San Isidro (BA)" loading="lazy">
+          <p class="proyecto-etiqueta">🏛️ Proyecto Casa Dufaur, San Isidro (BA)</p>
         </div>
-        <div class="competencia-card">
-          <h3 class="competencia-titulo">
-            <span>♟️</span> Estrategia
-          </h3>
-          <p class="competencia-desc">Optimización de espacios y procesos para maximizar la eficiencia operativa. Reconversión de activos industriales, desarrollo de naves, plantas de producción y centros logísticos.</p>
-        </div>
+        <div class="proyecto-item">
+          <img src="img/proyecto_ca_01.webp" alt="Proyecto Casa Ayacucho, San Isidro (BA)" loading="lazy">
+          <p class="proyecto-etiqueta">🏛️ Proyecto Casa Ayacucho, San Isidro (BA)</p>
+        </div>        
       </div>
     </section>
+    <!-- Fin seccion visualizaciones -->
 
-    <!-- Experiencia Laboral -->
-    <section class="section fade-in">
-      <h2>Experiencia Laboral</h2>
-      <div class="timeline">
-        
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="job-titulo">Director de Diseño y Construcción</div>
-          <div class="job-empresa">Independiente</div>
-          <span class="job-fecha">2010 – Presente</span>
-          <div class="job-descripcion">
-            Actualmente dirijo mi estudio especializado en proyectos de viviendas, locales comerciales y depósitos logísticos. Brindé asesoría estratégica a empresas globales (Daewoo, Sanyo, Newsan, Midas) en reconversión de activos y optimización de infraestructuras.
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="job-titulo">Gerente de Ingeniería y Producción</div>
-          <div class="job-empresa">PHILCO</div>
-          <span class="job-fecha">2002 – 2010</span>
-          <div class="job-descripcion">
-            Responsable directo sobre equipos multidisciplinarios y operaciones, reportando a la Gerencia General.
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="job-titulo">Diseñador Proyectista de Ingeniería de Desarrollo</div>
-          <span class="job-fecha">1989 – 2002</span>
-          <div class="job-descripcion">
-            Desarrollo de proyectos para empresas líderes como Arcor, Philips, Whirlpool, Peabody y Philco.
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="job-titulo">Diseñador Proyectista de Infraestructura y Energía</div>
-          <span class="job-fecha">1986 – 1989</span>
-          <div class="job-descripcion">
-            Diseño de instalaciones industriales para el Grupo ARCOR (San Luis). Proyectos de líneas de transmisión eléctrica (INDUMER SRL) e infraestructura hospitalaria (ETASA SRL).
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="job-titulo">Dibujante Técnico / Proyectista Junior</div>
-          <span class="job-fecha">1980 – 1986</span>
-          <div class="job-descripcion">
-            Colaboración en los estudios de arquitectura IRIBARNE y Asociados y Arq. Jorge Luis Vázquez, adquiriendo bases sólidas en dibujo técnico arquitectónico y normativa constructiva.
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== NUEVA SECCIÓN: EXPERIENCIA INTERNACIONAL ==================== -->
-    <section class="section fade-in">
-      <h2>Experiencia Internacional</h2>
-      <p class="intro-text">
-        Gracias a mi alianza con estas empresas (Daewoo, Sanyo, Newsan, Midas), he participado en proyectos de innovación tecnológica en Brasil, Chile, China y Corea del Sur. Esta trayectoria internacional consolida mi capacidad para resolver desafíos técnicos y logísticos en entornos competitivos, exigentes y de escala global.
-      </p>
-      
-      <div class="paises-grid">
-        <div class="pais-item">
-          <span class="flag-icon">🇧🇷</span>
-          <span class="pais-nombre">Brasil</span>
-        </div>
-        <div class="pais-item">
-          <span class="flag-icon">🇨🇱</span>
-          <span class="pais-nombre">Chile</span>
-        </div>
-        <div class="pais-item">
-          <span class="flag-icon">🇨🇳</span>
-          <span class="pais-nombre">China</span>
-        </div>
-        <div class="pais-item">
-          <span class="flag-icon">🇰🇷</span>
-          <span class="pais-nombre">Corea del Sur</span>
-        </div>
-      </div>
-    </section>
-    <!-- ==================== FIN NUEVA SECCIÓN ==================== -->
-
-    <!-- Formación Académica -->
-    <section class="section fade-in">
-      <h2>Formación Académica</h2>
-      <div class="educacion-grid">
-        
-        <div class="edu-card">
-          <div class="edu-year">2004</div>
-          <div class="edu-titulo">Posgrado en Sistemas de Información Geográfica</div>
-          <div class="edu-inst">Universidad de Buenos Aires | FADU</div>
-           <div class="edu-details">
-            <p>• Posgrado en GIS/SIG | FADU</p>
-              </div>
-        </div>
-
-        <div class="edu-card">
-          <div class="edu-year">1999</div>
-          <div class="edu-titulo">Ingeniero de Sistemas MCSE</div>
-          <div class="edu-inst">Instituto New Horizons - Buenos Aires</div>
-          <div class="edu-details">
-            <p>• Ingeniero de Sistemas MCSE</p>
-            <p>• Master en Programación</p>
-            <p>• Programador Informático</p>
-            <p>• (Fully sponsored by Philco)</p>
-          </div>
-        </div>
-
-        <div class="edu-card">
-          <div class="edu-year">1986</div>
-          <div class="edu-titulo">Constructor Civil</div>
-          <div class="edu-inst">Instituto de Educación Tecnológica | CONET | CABA</div>
-          <div class="edu-details">
-            <p>• Posgrado en Diseño de Estructuras</p>           
-            <p>• Título Principal: Constructor Civil</p>
-            <p>• Título Intermedio: Téc. Constructor</p>
-          </div>
-        </div>
-
-        <div class="edu-card">
-          <div class="edu-year">1982</div>
-          <div class="edu-titulo">Dibujante Técnico</div>
-          <div class="edu-inst">E.N.E.T. No. 1, 25 de Mayo, Buenos Aires</div>
-          <div class="edu-details">
-            <p>• Dibujante Técnico</p>
-            <p>• Especialidad:</p>
-            <p>• Construcción Civil y Mecánica</p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="especializaciones-box">
-        <h3>Especializaciones constantes en:</h3>
-        <p>Diseño · CAD · BIM · GIS/SIG · IA aplicada · Topografía Geomática</p>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <div class="cta-section fade-in">
-      <h2>¿Hablamos de tu proyecto?</h2>
+    <!-- Inicio seccion whatsapp -->
+    <div class="cta-section">
+      <h2>¡Solicita tu presupuesto sin cargo!</h2>
       <a href="https://wa.me/5492345457065?text=Hola%20Mario,%20necesito%20información%20sobre%20sus%20servicios"
          class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
         💬 WhatsApp
       </a>
     </div>
+    <!-- Fin seccion whatsapp -->
 
-    <!-- Contacto -->
-    <section class="section fade-in" id="contacto">
+    <!-- Canales de contacto -->
+    <section class="section">
       <h2>Contacto</h2>
       <div class="contacto-info">
         <div class="contacto-item">
@@ -907,24 +453,16 @@
           <div><strong>WhatsApp:</strong> +549 2345 457065</div>
         </div>
         <div class="contacto-item">
-          <span class="icono">✉️</span>
-          <div><strong>Email:</strong> molina.aec@gmail.com</div>
-        </div>
-        <div class="contacto-item">
           <span class="icono">📷</span>
           <div><strong>Instagram:</strong> <a href="https://www.instagram.com/mm.proyectos.ar/" target="_blank" rel="noopener noreferrer" class="contacto-enlace">@mm.proyectos.ar</a></div>
         </div>
         <div class="contacto-item">
           <span class="icono">🌐</span>
-          <div><strong>Mi página web:</strong> <a href="https://bio.site/mariomolina" target="_blank" rel="noopener noreferrer" class="contacto-enlace">bio.site/mariomolina</a></div>
+          <div><strong>Mi pagina web:</strong> <a href="https://bio.site/mariomolina" target="_blank" rel="noopener noreferrer" class="contacto-enlace">bio.site/mariomolina</a></div>
         </div>
         <div class="contacto-item">
           <span class="icono">🌐</span>
-          <div><strong>Github:</strong> <a href="https://github.com/mariomolinacc" target="_blank" rel="noopener noreferrer" class="contacto-enlace">github.com/mariomolinacc</a></div>
-        </div>
-        <div class="contacto-item">
-          <span class="icono">🌐</span>
-          <div><strong>Mi landing page:</strong> <a href="https://mariomolinacc.github.io/" target="_blank" rel="noopener noreferrer" class="contacto-enlace">mariomolinacc.github.io</a></div>
+          <div><strong>Github web:</strong> <a href="https://github.com/mariomolinacc" target="_blank" rel="noopener noreferrer" class="contacto-enlace">github.com/mariomolinacc</a></div>
         </div>
         <div class="contacto-item">
           <span class="icono">📍</span>
@@ -933,101 +471,10 @@
       </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-      <div class="footer-enlaces">
-        <a href="tel:+5492345457065">📞 Llamar</a>
-        <a href="mailto:molina.aec@gmail.com">✉️ Email</a>
-        <a href="https://wa.me/5492345457065" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
-      </div>
-      <p>&copy; 2023 Mario Molina - Diseño y Construcción - Todos los derechos reservados – Buenos Aires, Argentina 🌎</p>
+      <!-- Script para que el año se actualice solo -->
+      <p>&copy; <script>document.write(new Date().getFullYear())</script> Mario Molina - Diseño y Construcción - Todos los derechos reservados – Buenos Aires, Argentina 🌎</p>
     </footer>
-    
   </div>
-
-  <script>
-    // Animación de entrada con IntersectionObserver
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px"
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.fade-in').forEach(el => {
-      observer.observe(el);
-    });
-
-    // Navegación activa según scroll
-    const secciones = document.querySelectorAll('section[id], header[id]');
-    const navEnlaces = document.querySelectorAll('.nav-enlace');
-    const navbar = document.getElementById('navbar');
-
-    function actualizarNavActivo() {
-      let scrollY = window.scrollY + 100;
-      
-      secciones.forEach(seccion => {
-        const sectionTop = seccion.offsetTop;
-        const sectionHeight = seccion.offsetHeight;
-        const sectionId = seccion.getAttribute('id');
-        
-        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-          navEnlaces.forEach(enlace => {
-            enlace.classList.remove('activo');
-            if (enlace.getAttribute('href') === '#' + sectionId) {
-              enlace.classList.add('activo');
-            }
-          });
-        }
-      });
-    }
-
-    // Ocultar/mostrar navbar según dirección de scroll
-    let ultimoScrollY = 0;
-
-    function manejarScrollNavbar() {
-      const scrollY = window.scrollY;
-      
-      if (scrollY > ultimoScrollY && scrollY > 200) {
-        navbar.classList.add('hidden');
-      } else {
-        navbar.classList.remove('hidden');
-      }
-      
-      ultimoScrollY = scrollY;
-    }
-
-    // Smooth scroll para enlaces de navegación
-    document.querySelectorAll('.nav-enlace').forEach(enlace => {
-      enlace.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-          const offsetTop = targetElement.offsetTop - 70;
-          window.scrollTo({
-            top: offsetTop,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-
-    // Event listeners
-    window.addEventListener('scroll', () => {
-      actualizarNavActivo();
-      manejarScrollNavbar();
-    });
-
-    // Inicializar
-    actualizarNavActivo();
-  </script>
 </body>
 </html>

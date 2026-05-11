@@ -1,17 +1,20 @@
 # Hola, soy Mario Molina 👋 
 
-Profesional con mas de tres decadas de experiencia en diseño y desarrolo de proyectos de **Arquitectura, Ingeniería y Construcción (AEC)**. Mi enfoque actual combina la solidez de la gestión de proyectos con la innovación del desarrollo web y las tecnologías de diseño 3D.
+Profesional con mas de tres decadas de experiencia en diseño y dirección de proyectos de **Arquitectura, Ingeniería y Construcción** (AEC). Su práctica actual combina la gestión de proyectos con el manejo de tecnologías de diseño tridimensional y desarrollo web para crear visualizaciones y presentaciones avanzadas en infraestructura digital.
 
 ---
 
 ### 🏛️ Diseño, Planificación y Dirección de Obras.
 Dirijo mi estudio de **Diseño y Construcción** especializado en:
+
 - **Diseño Residencial y Comercial:** Proyectos urbanos, rurales y comerciales.
 - **Logística e Industria:** Depósitos, naves industriales y centros logísticos.
-- **Formación:** Instructor y capacitador de diseñadores en software líder 3D (Comercial y Open Source).
+- **Formación:** Instructor y capacitador en software de diseño Comercial y Open Source, como AutoCAD, FreeCAD y otros.
 
 ### 🐧 Filosofía Open Source & Web
-Desarrollo y diseño íntegramente sobre **Debian**, utilizando un stack de herramientas libres:
+
+Diseña y desarrolla proyectos íntegramente sobre entornos Debian GNU/Linux, promoviendo un flujo de trabajo basado en software libre en su estudio, para proyectos de Diseño y Construcción:
+
 - **Modelado 3D & BIM:** FreeCAD y Bonsai Blender (BlenderBIM).
 - **Ingeniería 2D:** QCAD para planos 2D de ingeniería civil.
 - **Geomática:** QGIS / QAD (Quantum Aided Design) planos de topografía y mapas cartograficos.
@@ -29,7 +32,7 @@ Desarrollo y diseño íntegramente sobre **Debian**, utilizando un stack de herr
 - **Desarrollo Web:** HTML5, CSS3 y JavaScript - [VSCodium](https://vscodium.com/)
 
 ### 🏢 Software Comercial (Entornos Corporativos)
-- **CAD & BIM:** 
+**CAD & BIM:** 
 - **[AutoCAD Civil 3D](https://www.autodesk.com/latam/products/civil-3d/overview)
 - **[SketchUp](https://sketchup.trimble.com/es/products/sketchup-for-web)
 - **[Revit](https://www.autodesk.com/latam/products/revit/overview)
